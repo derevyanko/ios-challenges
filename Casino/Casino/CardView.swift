@@ -8,19 +8,25 @@
 import SwiftUI
 
 struct CardView: View {
-    @Binding var fruitName: String
+    @Binding var card: Card
     
     var body: some View {
-        Image(fruitName)
+        Image(card.fruitName)
             .resizable()
             .aspectRatio(contentMode: .fit)
-            .background(Color.white.opacity(0.5))
+            .background(card.backgroundColor.opacity(0.5))
             .cornerRadius(20)
     }
 }
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(fruitName: Binding.constant("apple"))
+        CardView(card: Binding.constant(
+            Card(fruitId: 0,
+                fruitName: "apple",
+                backgroundColor: Color.white
+                )
+            )
+        )
     }
 }

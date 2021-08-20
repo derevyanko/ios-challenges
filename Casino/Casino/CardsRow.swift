@@ -12,11 +12,11 @@ struct CardsRow: View {
     
     var body: some View {
         HStack {
-            CardView(fruitName: $row[0].fruitName)
+            CardView(card: $row[0])
             
-            CardView(fruitName: $row[1].fruitName)
+            CardView(card: $row[1])
             
-            CardView(fruitName: $row[2].fruitName)
+            CardView(card: $row[2])
         }.padding(.horizontal)
     }
 }
