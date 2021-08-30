@@ -14,6 +14,7 @@
 		0742774526DCE66000A1ADBD /* MeditationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0742774426DCE66000A1ADBD /* MeditationTests.swift */; };
 		0742775026DCE66000A1ADBD /* MeditationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0742774F26DCE66000A1ADBD /* MeditationUITests.swift */; };
 		0742776426DCEDBC00A1ADBD /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0742776326DCEDBC00A1ADBD /* Colors.swift */; };
+		0742776926DD7C6A00A1ADBD /* SearchPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0742776826DD7C6A00A1ADBD /* SearchPanel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		0742776126DCE6C200A1ADBD /* gothica1_medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothica1_medium.ttf; sourceTree = "<group>"; };
 		0742776226DCE6C200A1ADBD /* gothica1_black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothica1_black.ttf; sourceTree = "<group>"; };
 		0742776326DCEDBC00A1ADBD /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		0742776826DD7C6A00A1ADBD /* SearchPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPanel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				0742773226DCE65F00A1ADBD /* MeditationApp.swift */,
-				0742773426DCE65F00A1ADBD /* ContentView.swift */,
+				0742776626DD7BD300A1ADBD /* View */,
 				0742773626DCE66000A1ADBD /* Assets.xcassets */,
 				0742773B26DCE66000A1ADBD /* Info.plist */,
 				0742775D26DCE6A600A1ADBD /* Fonts */,
@@ -157,6 +159,23 @@
 				0742776326DCEDBC00A1ADBD /* Colors.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0742776626DD7BD300A1ADBD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0742773426DCE65F00A1ADBD /* ContentView.swift */,
+				0742776726DD7BE200A1ADBD /* Home */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0742776726DD7BE200A1ADBD /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0742776826DD7C6A00A1ADBD /* SearchPanel.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +309,7 @@
 			files = (
 				0742776426DCEDBC00A1ADBD /* Colors.swift in Sources */,
 				0742773526DCE65F00A1ADBD /* ContentView.swift in Sources */,
+				0742776926DD7C6A00A1ADBD /* SearchPanel.swift in Sources */,
 				0742773326DCE65F00A1ADBD /* MeditationApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
