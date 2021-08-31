@@ -20,6 +20,7 @@ struct SearchPanel: View {
                 .foregroundColor(.white)
                 .frame(width: 25, height: 25)
         }
+        .padding()
     }
 }
 

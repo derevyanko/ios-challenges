@@ -22,6 +22,7 @@ struct DailyThought: View {
         .padding()
         .background(Color.teal700)
         .cornerRadius(10)
+        .padding()
     }
 }
 

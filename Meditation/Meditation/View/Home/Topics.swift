@@ -7,16 +7,18 @@ struct Topics: View {
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .padding(.bottom)
+                .foregroundColor(.white )
             
             HStack {
                 Topic(topicName: "Sleep\nMeditation", topicImage: Image(systemName: "headphones"), topicColor: Color.purple)
-                Topic(topicName: "Tips\nFor Sleeping", topicImage: Image(systemName: "video"), topicColor: Color.green)
+                Topic(topicName: "Tips For\nSleeping", topicImage: Image(systemName: "video"), topicColor: Color.green)
             }
             HStack {
                 Topic(topicName: "Night\nIsland", topicImage: Image(systemName: "moon.stars"), topicColor: Color.yellow)
                 Topic(topicName: "Calming\nSounds", topicImage: Image(systemName: "music.note"), topicColor: Color.orange)
             }
         }
+        .padding()
     }
 }
 
@@ -30,6 +32,7 @@ struct Topic: View {
             Text(topicName)
                 .font(.title3)
                 .fontWeight(.bold)
+                .foregroundColor(.white)
             
             Spacer()
             
@@ -49,7 +52,7 @@ struct Topic: View {
                     .cornerRadius(15)
             }
         }
-        .frame(height: 150)
+        .frame(maxHeight: 150)
         .padding()
         .background(topicColor)
         .cornerRadius(10)

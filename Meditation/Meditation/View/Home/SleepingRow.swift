@@ -7,7 +7,7 @@ struct SleepingRow: View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 0) {
                 ForEach(categoriesSleeping, id: \.self) { sleeping in
-                    Text(sleeping)
+                    Button(sleeping) {}
                         .padding()
                         .background(Color.secondary)
                         .foregroundColor(.white)
