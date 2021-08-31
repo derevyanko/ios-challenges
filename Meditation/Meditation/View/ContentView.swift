@@ -7,11 +7,14 @@ struct ContentView: View {
                 .foregroundColor(.deepBlue)
                 .ignoresSafeArea()
             
-            VStack {
+            VStack(alignment: .leading) {
                 SearchPanel()
+                    .padding()
                 
-                Spacer()
+                SleepingRow()
+                    .listRowInsets(EdgeInsets())
             }
+            
         }
     }
 }
@@ -19,5 +22,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .preferredColorScheme(.dark)
     }
 }

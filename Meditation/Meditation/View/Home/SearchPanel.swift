@@ -19,12 +19,13 @@ struct SearchPanel: View {
                 .resizable()
                 .foregroundColor(.white)
                 .frame(width: 25, height: 25)
-        }.padding()
+        }
     }
 }
 
 struct SearchPanel_Previews: PreviewProvider {
     static var previews: some View {
         SearchPanel()
+            .preferredColorScheme(.dark)
     }
 }
