@@ -7,14 +7,21 @@ struct ContentView: View {
                 .foregroundColor(.deepBlue)
                 .ignoresSafeArea()
             
-            VStack(alignment: .leading) {
-                SearchPanel()
-                    .padding()
+            ScrollView {
+                VStack(alignment: .leading) {
+                    SearchPanel()
+                        .padding()
+                    
+                    SleepingRow()
+                        .listRowInsets(EdgeInsets())
+                    
+                    DailyThought()
+                        .padding()
                 
-                SleepingRow()
-                    .listRowInsets(EdgeInsets())
+                    Topics()
+                        .padding()
+                }
             }
-            
         }
     }
 }
