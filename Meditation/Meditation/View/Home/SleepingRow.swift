@@ -1,18 +1,20 @@
 import SwiftUI
 
 struct SleepingRow: View {
+    @State var selectedButtonIndex = 0
     var categoriesSleeping = ["Sweet Sleep", "Insomnia", "Depressic", "Disorder"]
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 0) {
-                ForEach(categoriesSleeping, id: \.self) { sleeping in
-                    Button(sleeping) {}
-                        .padding()
-                        .background(Color.secondary)
-                        .foregroundColor(.white)
-                        .cornerRadius(15)
-                        .padding(.leading, 15)
+                ForEach(Array(categoriesSleeping.enumerated()), id: \.1) { index, sleeping in
+                    Button(sleeping) {
+                        selectedButtonIndex = index
+                    }.padding()
+                    .background(selectedButtonIndex == index ? Color.pink : Color.secondary)
+                    .foregroundColor(.white)
+                    .cornerRadius(15)
+                    .padding(.leading, 15)
                 }
             }
         }
