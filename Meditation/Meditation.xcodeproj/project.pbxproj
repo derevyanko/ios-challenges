@@ -14,13 +14,14 @@
 		0742774526DCE66000A1ADBD /* MeditationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0742774426DCE66000A1ADBD /* MeditationTests.swift */; };
 		0742775026DCE66000A1ADBD /* MeditationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0742774F26DCE66000A1ADBD /* MeditationUITests.swift */; };
 		0742776426DCEDBC00A1ADBD /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0742776326DCEDBC00A1ADBD /* Colors.swift */; };
-		0742776F26DE409000A1ADBD /* SleepingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0742776D26DE409000A1ADBD /* SleepingRow.swift */; };
+		0742776F26DE409000A1ADBD /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0742776D26DE409000A1ADBD /* Mood.swift */; };
 		0742777026DE409000A1ADBD /* SearchPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0742776E26DE409000A1ADBD /* SearchPanel.swift */; };
 		0742777226DE542600A1ADBD /* DailyThought.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0742777126DE542600A1ADBD /* DailyThought.swift */; };
 		0742777426DE56A000A1ADBD /* Topics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0742777326DE56A000A1ADBD /* Topics.swift */; };
 		0788453026E3CE5B00ACB800 /* TabViewsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0788452F26E3CE5B00ACB800 /* TabViewsData.swift */; };
 		0788453226E3DB6400ACB800 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0788453126E3DB6400ACB800 /* TabView.swift */; };
 		0788453626E3FF0D00ACB800 /* TopicsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0788453526E3FF0D00ACB800 /* TopicsData.swift */; };
+		0788453826E40F5500ACB800 /* MoodsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0788453726E40F5500ACB800 /* MoodsData.swift */; };
 		07912EF226DFB87A0044D429 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07912EF126DFB87A0044D429 /* Home.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,13 +61,14 @@
 		0742776126DCE6C200A1ADBD /* gothica1_medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothica1_medium.ttf; sourceTree = "<group>"; };
 		0742776226DCE6C200A1ADBD /* gothica1_black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothica1_black.ttf; sourceTree = "<group>"; };
 		0742776326DCEDBC00A1ADBD /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		0742776D26DE409000A1ADBD /* SleepingRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepingRow.swift; sourceTree = "<group>"; };
+		0742776D26DE409000A1ADBD /* Mood.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
 		0742776E26DE409000A1ADBD /* SearchPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPanel.swift; sourceTree = "<group>"; };
 		0742777126DE542600A1ADBD /* DailyThought.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyThought.swift; sourceTree = "<group>"; };
 		0742777326DE56A000A1ADBD /* Topics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topics.swift; sourceTree = "<group>"; };
 		0788452F26E3CE5B00ACB800 /* TabViewsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewsData.swift; sourceTree = "<group>"; };
 		0788453126E3DB6400ACB800 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		0788453526E3FF0D00ACB800 /* TopicsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsData.swift; sourceTree = "<group>"; };
+		0788453726E40F5500ACB800 /* MoodsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodsData.swift; sourceTree = "<group>"; };
 		07912EF126DFB87A0044D429 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -190,7 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				0742776E26DE409000A1ADBD /* SearchPanel.swift */,
-				0742776D26DE409000A1ADBD /* SleepingRow.swift */,
+				0742776D26DE409000A1ADBD /* Mood.swift */,
 				0742777126DE542600A1ADBD /* DailyThought.swift */,
 				0742777326DE56A000A1ADBD /* Topics.swift */,
 				07912EF126DFB87A0044D429 /* Home.swift */,
@@ -203,6 +205,7 @@
 			children = (
 				0788452F26E3CE5B00ACB800 /* TabViewsData.swift */,
 				0788453526E3FF0D00ACB800 /* TopicsData.swift */,
+				0788453726E40F5500ACB800 /* MoodsData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -336,11 +339,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0788453826E40F5500ACB800 /* MoodsData.swift in Sources */,
 				0788453226E3DB6400ACB800 /* TabView.swift in Sources */,
 				0742777426DE56A000A1ADBD /* Topics.swift in Sources */,
 				0742777026DE409000A1ADBD /* SearchPanel.swift in Sources */,
 				0742776426DCEDBC00A1ADBD /* Colors.swift in Sources */,
-				0742776F26DE409000A1ADBD /* SleepingRow.swift in Sources */,
+				0742776F26DE409000A1ADBD /* Mood.swift in Sources */,
 				0742773526DCE65F00A1ADBD /* ContentView.swift in Sources */,
 				0742773326DCE65F00A1ADBD /* MeditationApp.swift in Sources */,
 				0788453626E3FF0D00ACB800 /* TopicsData.swift in Sources */,

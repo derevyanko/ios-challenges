@@ -11,7 +11,7 @@ struct Home: View {
                 VStack(alignment: .leading) {
                     SearchPanel()
                     
-                    SleepingRow()
+                    Mood()
                         .listRowInsets(EdgeInsets())
                     
                     DailyThought()

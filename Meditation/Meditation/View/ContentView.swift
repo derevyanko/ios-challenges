@@ -15,5 +15,6 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
             .environmentObject(TabViewsData())
             .environmentObject(TopicsData())
+            .environmentObject(MoodsData())
     }
 }
