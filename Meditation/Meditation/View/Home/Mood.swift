@@ -12,8 +12,8 @@ struct Mood: View {
                     }.padding()
                     .background(moodsData.selectedMoodIndex == index ? Color.pink : Color.secondary)
                     .foregroundColor(.white)
-                    .cornerRadius(15)
-                    .padding(.leading, 15)
+                    .cornerRadius(16)
+                    .padding(.leading, 16)
                 }
             }
         }.listRowInsets(EdgeInsets())

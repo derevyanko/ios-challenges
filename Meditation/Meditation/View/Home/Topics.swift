@@ -39,23 +39,23 @@ struct Topic: View {
                 HStack {
                     topicData?.image
                         .resizable()
-                        .frame(maxWidth: 30, maxHeight: 25)
+                        .frame(maxWidth: 32, maxHeight: 28)
                         .scaledToFit()
                         .foregroundColor(.white)
                     
                     Spacer()
                     
                     Text("Start")
-                        .padding(.vertical, 10)
+                        .padding(.vertical, 12)
                         .padding(.horizontal, 20)
                         .foregroundColor(.black)
                         .background(Color.white)
-                        .cornerRadius(15)
+                        .cornerRadius(16)
                 }
-            }.frame(maxHeight: 150)
+            }.frame(maxHeight: 152)
             .padding()
             .background(topicData?.color)
-            .cornerRadius(10)
+            .cornerRadius(12)
         }
     }
 }

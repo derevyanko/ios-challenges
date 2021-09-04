@@ -14,22 +14,22 @@ struct TabView: View {
                     }, label: {
                         tab.image
                             .resizable()
-                    }).frame(width: 30, height: 30)
+                    }).frame(width: 28, height: 28)
                     .scaledToFit()
-                    .padding(10)
+                    .padding(12)
                     .background(isSelected ? Color.purple: Color.deepBlue)
                     .foregroundColor(isSelected ? .white : .gray)
-                    .cornerRadius(15)
+                    .cornerRadius(16)
                     
                     Text(tab.name)
                         .foregroundColor(.white)
-                }.frame(minWidth: 50, maxWidth: 80, minHeight: 50, maxHeight: 80)
+                }.frame(minWidth: 52, maxWidth: 80, minHeight: 52, maxHeight: 80)
             }
         }.ignoresSafeArea()
         .background(Color.deepBlue)
         .background(
             Rectangle()
-                .shadow(radius: 10)
+                .shadow(radius: 12)
         )
     }
 }

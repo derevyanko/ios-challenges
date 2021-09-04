@@ -3,7 +3,7 @@ import SwiftUI
 struct DailyThought: View {
     var body: some View {
         HStack {
-            VStack(alignment: .leading, spacing: 10) {
+            VStack(alignment: .leading, spacing: 12) {
                 Text("Daily Thought")
                     .font(.title2)
                     .fontWeight(.medium)
@@ -20,7 +20,7 @@ struct DailyThought: View {
                 .frame(width: 40, height: 40)
         }.padding()
         .background(Color.teal700)
-        .cornerRadius(10)
+        .cornerRadius(12)
         .padding()
     }
 }
