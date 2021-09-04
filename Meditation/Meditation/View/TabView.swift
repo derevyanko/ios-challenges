@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct TabView: View {
-    @EnvironmentObject private var tabViews: TabViews
+    @EnvironmentObject private var tabViews: TabViewsData
     
     var body: some View {
         HStack {
@@ -36,6 +36,6 @@ struct TabView: View {
 struct TabView_Previews: PreviewProvider {
     static var previews: some View {
         TabView()
-            .environmentObject(TabViews())
+            .environmentObject(TabViewsData())
     }
 }

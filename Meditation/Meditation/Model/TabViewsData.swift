@@ -1,7 +1,7 @@
 import Foundation
 import Combine
 
-final class TabViews: ObservableObject {
+final class TabViewsData: ObservableObject {
     @Published var selectedTabIndex = 0
     var tabItems = [
         TabItem(id: 0, name: "Home", imageName: "house"),

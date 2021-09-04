@@ -2,12 +2,12 @@ import SwiftUI
 
 @main
 struct MeditationApp: App {
-    @StateObject private var tabViews = TabViews()
+    @StateObject private var tabViews = TabViewsData()
     
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(TabViews())
+                .environmentObject(TabViewsData())
         }
     }
 }
