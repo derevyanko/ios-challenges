@@ -20,6 +20,7 @@
 		0742777426DE56A000A1ADBD /* Topics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0742777326DE56A000A1ADBD /* Topics.swift */; };
 		0788453026E3CE5B00ACB800 /* TabViewsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0788452F26E3CE5B00ACB800 /* TabViewsData.swift */; };
 		0788453226E3DB6400ACB800 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0788453126E3DB6400ACB800 /* TabView.swift */; };
+		0788453626E3FF0D00ACB800 /* TopicsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0788453526E3FF0D00ACB800 /* TopicsData.swift */; };
 		07912EF226DFB87A0044D429 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07912EF126DFB87A0044D429 /* Home.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		0742777326DE56A000A1ADBD /* Topics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topics.swift; sourceTree = "<group>"; };
 		0788452F26E3CE5B00ACB800 /* TabViewsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewsData.swift; sourceTree = "<group>"; };
 		0788453126E3DB6400ACB800 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		0788453526E3FF0D00ACB800 /* TopicsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsData.swift; sourceTree = "<group>"; };
 		07912EF126DFB87A0044D429 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -200,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				0788452F26E3CE5B00ACB800 /* TabViewsData.swift */,
+				0788453526E3FF0D00ACB800 /* TopicsData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				0742776F26DE409000A1ADBD /* SleepingRow.swift in Sources */,
 				0742773526DCE65F00A1ADBD /* ContentView.swift in Sources */,
 				0742773326DCE65F00A1ADBD /* MeditationApp.swift in Sources */,
+				0788453626E3FF0D00ACB800 /* TopicsData.swift in Sources */,
 				07912EF226DFB87A0044D429 /* Home.swift in Sources */,
 				0788453026E3CE5B00ACB800 /* TabViewsData.swift in Sources */,
 				0742777226DE542600A1ADBD /* DailyThought.swift in Sources */,

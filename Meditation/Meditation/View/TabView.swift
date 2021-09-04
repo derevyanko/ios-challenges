@@ -12,7 +12,8 @@ struct TabView: View {
                     Button(action: {
                         tabViews.selectedTabIndex = tab.id
                     }, label: {
-                        Image(systemName: tab.imageName )
+                        tab.image
+                            .resizable()
                     }).frame(width: 30, height: 30)
                     .scaledToFit()
                     .padding(10)
@@ -21,11 +22,11 @@ struct TabView: View {
                     .cornerRadius(15)
                     
                     Text(tab.name)
+                        .foregroundColor(.white)
                 }.frame(minWidth: 50, maxWidth: 80, minHeight: 50, maxHeight: 80)
             }
         }.ignoresSafeArea()
         .background(Color.deepBlue)
-        .foregroundColor(.white)
         .background(
             Rectangle()
                 .shadow(radius: 10)
