@@ -12,7 +12,6 @@ struct Home: View {
                     SearchPanel()
                     
                     Mood()
-                        .listRowInsets(EdgeInsets())
                     
                     DailyThought()
                 

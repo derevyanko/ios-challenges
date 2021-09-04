@@ -14,9 +14,9 @@ struct Mood: View {
                     .foregroundColor(.white)
                     .cornerRadius(15)
                     .padding(.leading, 15)
-                }.listRowInsets(EdgeInsets())
+                }
             }
-        }
+        }.listRowInsets(EdgeInsets())
     }
 }
 

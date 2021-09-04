@@ -7,10 +7,10 @@ struct DailyThought: View {
                 Text("Daily Thought")
                     .font(.title2)
                     .fontWeight(.medium)
+                
                 Text("Meditation • 3-10 min")
                     .font(.subheadline)
-            }
-            .foregroundColor(.white)
+            }.foregroundColor(.white)
             
             Spacer()
             
@@ -18,8 +18,7 @@ struct DailyThought: View {
                 .resizable()
                 .foregroundColor(.white)
                 .frame(width: 40, height: 40)
-        }
-        .padding()
+        }.padding()
         .background(Color.teal700)
         .cornerRadius(10)
         .padding()

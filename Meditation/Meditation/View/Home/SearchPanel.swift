@@ -7,11 +7,11 @@ struct SearchPanel: View {
                 Text("Good Morning, Oleh")
                     .font(.title2)
                     .fontWeight(.medium)
+                
                 Text("We wish you have a good day!")
                     .font(.callout)
                     .foregroundColor(.gray)
-            }
-            .foregroundColor(.white)
+            }.foregroundColor(.white)
             
             Spacer()
             
@@ -19,8 +19,7 @@ struct SearchPanel: View {
                 .resizable()
                 .foregroundColor(.white)
                 .frame(width: 25, height: 25)
-        }
-        .padding()
+        }.padding()
     }
 }
 

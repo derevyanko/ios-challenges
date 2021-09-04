@@ -17,8 +17,7 @@ struct Topics: View {
                     Topic(topicData: topicsData.topics[index + 1])
                 }
             }
-        }
-        .padding()
+        }.padding()
     }
 }
 
@@ -53,8 +52,7 @@ struct Topic: View {
                         .background(Color.white)
                         .cornerRadius(15)
                 }
-            }
-            .frame(maxHeight: 150)
+            }.frame(maxHeight: 150)
             .padding()
             .background(topicData?.color)
             .cornerRadius(10)

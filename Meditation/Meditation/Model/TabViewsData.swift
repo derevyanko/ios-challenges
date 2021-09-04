@@ -1,5 +1,4 @@
 import SwiftUI
-import Combine
 
 final class TabViewsData: ObservableObject {
     @Published var selectedTabIndex = 0
