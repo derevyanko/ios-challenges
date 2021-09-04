@@ -41,6 +41,7 @@ struct Topic: View {
                     .resizable()
                     .frame(maxWidth: 30, maxHeight: 25)
                     .scaledToFit()
+                    .foregroundColor(.white)
                 
                 Spacer()
                 
@@ -62,6 +63,6 @@ struct Topic: View {
 struct Topics_Previews: PreviewProvider {
     static var previews: some View {
         Topics()
-            .preferredColorScheme(.dark)
+            .preferredColorScheme(.light)
     }
 }

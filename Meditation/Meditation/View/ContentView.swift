@@ -2,31 +2,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ZStack {
-            Rectangle()
-                .foregroundColor(.deepBlue)
-                .ignoresSafeArea()
+        ZStack(alignment: .bottom) {
+            Home()
             
-            ScrollView(showsIndicators: false) {
-                VStack(alignment: .leading) {
-                    SearchPanel()
-                    
-                    SleepingRow()
-                        .listRowInsets(EdgeInsets())
-                    
-                    DailyThought()
-                
-                    Topics()
-                }
-            }
+            TabView()
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            ContentView()
-                .preferredColorScheme(.dark)        }
+        ContentView()
+            .environmentObject(TabViews())
     }
 }

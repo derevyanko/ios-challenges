@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct SleepingRow: View {
-    @State var selectedButtonIndex = 0
+    @State private var selectedButtonIndex = 0
     var categoriesSleeping = ["Sweet Sleep", "Insomnia", "Depressic", "Disorder"]
     
     var body: some View {
