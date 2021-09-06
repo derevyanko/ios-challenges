@@ -2,22 +2,28 @@ import SwiftUI
 
 struct Topics: View {
     @EnvironmentObject private var topicsData: TopicsData
+    let topicsColumnCount = Int(UIScreen.screenWidth - 2 * 20) / 172
     
     var body: some View {
+        let _ = print(UIScreen.screenWidth, topicsColumnCount)
+        
         VStack(alignment: .leading) {
             Text("Featured")
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .padding(.bottom)
-                .foregroundColor(.white )
+                .foregroundColor(.white)
             
-            ForEach(Array(stride(from: 0, to: topicsData.topics.count, by: 2)), id: \.self) { index in
-                HStack {
-                    Topic(topicData: topicsData.topics[index])
-                    if index + 1 == topicsData.topics.count {
-                        EmptyView()
-                    } else {
-                        Topic(topicData: topicsData.topics[index + 1])
+            ForEach(0 ..< topicsData.topics.count / topicsColumnCount + 1) { rowIndex in
+                HStack(spacing: 8) {
+                    let startColumnIndex = rowIndex * topicsColumnCount
+                    let endColumnIndex = min(startColumnIndex + topicsColumnCount, topicsData.topics.count)
+                    ForEach(startColumnIndex ..< endColumnIndex) { index in
+                        if index < topicsData.topics.count {
+                            Topic(topicData: topicsData.topics[index])
+                        } else {
+                            EmptyView()
+                        }
                     }
                 }
             }
@@ -52,8 +58,9 @@ struct Topic: View {
                     .foregroundColor(.black)
                     .background(Color.white)
                     .cornerRadius(16)
+                    .frame(maxHeight: 52)
             }
-        }.frame(maxHeight: 152)
+        }.frame(minHeight: 140, maxHeight: 152)
         .padding()
         .background(topicData.color)
         .cornerRadius(12)

@@ -25,5 +25,9 @@ struct Home: View {
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
         Home()
+            .environmentObject(TabViewsData())
+            .environmentObject(TopicsData())
+            .environmentObject(MoodsData())
+            .environment(\.locale, .init(identifier: "uk"))
     }
 }
