@@ -14,7 +14,11 @@ struct Topics: View {
             ForEach(Array(stride(from: 0, to: topicsData.topics.count, by: 2)), id: \.self) { index in
                 HStack {
                     Topic(topicData: topicsData.topics[index])
-                    Topic(topicData: topicsData.topics[index + 1])
+                    if index + 1 == topicsData.topics.count {
+                        EmptyView()
+                    } else {
+                        Topic(topicData: topicsData.topics[index + 1])
+                    }
                 }
             }
         }.padding()
@@ -22,41 +26,37 @@ struct Topics: View {
 }
 
 struct Topic: View {
-    var topicData: TopicData?
+    var topicData: TopicData
     
     var body: some View {
-        if topicData == nil {
-            EmptyView()
-        } else {
-            VStack(alignment: .leading) {
-                Text(topicData!.name) // Question! `topicData?name` cause error
-                    .font(.title3)
-                    .fontWeight(.bold)
+        VStack(alignment: .leading) {
+            Text(topicData.name)
+                .font(.title3)
+                .fontWeight(.bold)
+                .foregroundColor(.white)
+            
+            Spacer()
+            
+            HStack {
+                topicData.image
+                    .resizable()
+                    .frame(maxWidth: 32, maxHeight: 28)
+                    .scaledToFit()
                     .foregroundColor(.white)
                 
                 Spacer()
                 
-                HStack {
-                    topicData?.image
-                        .resizable()
-                        .frame(maxWidth: 32, maxHeight: 28)
-                        .scaledToFit()
-                        .foregroundColor(.white)
-                    
-                    Spacer()
-                    
-                    Text("Start")
-                        .padding(.vertical, 12)
-                        .padding(.horizontal, 20)
-                        .foregroundColor(.black)
-                        .background(Color.white)
-                        .cornerRadius(16)
-                }
-            }.frame(maxHeight: 152)
-            .padding()
-            .background(topicData?.color)
-            .cornerRadius(12)
-        }
+                Text("Start")
+                    .padding(.vertical, 12)
+                    .padding(.horizontal, 20)
+                    .foregroundColor(.black)
+                    .background(Color.white)
+                    .cornerRadius(16)
+            }
+        }.frame(maxHeight: 152)
+        .padding()
+        .background(topicData.color)
+        .cornerRadius(12)
     }
 }
 
