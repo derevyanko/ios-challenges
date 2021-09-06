@@ -23,7 +23,6 @@ struct Mood: View {
 struct Mood_Previews: PreviewProvider {
     static var previews: some View {
         Mood()
-            .preferredColorScheme(.dark)
             .environmentObject(MoodsData())
     }
 }

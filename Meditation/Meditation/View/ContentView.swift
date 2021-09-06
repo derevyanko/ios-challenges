@@ -16,5 +16,6 @@ struct ContentView_Previews: PreviewProvider {
             .environmentObject(TabViewsData())
             .environmentObject(TopicsData())
             .environmentObject(MoodsData())
+            .environment(\.locale, .init(identifier: "uk"))
     }
 }
