@@ -2,11 +2,9 @@ import SwiftUI
 
 struct Topics: View {
     @EnvironmentObject private var topicsData: TopicsData
-    let topicsColumnCount = Int(UIScreen.screenWidth - 2 * 20) / 172
+    let topicsColumnCount = Int(UIScreen.screenWidth - 2 * 20) / 164
     
     var body: some View {
-        let _ = print(UIScreen.screenWidth, topicsColumnCount)
-        
         VStack(alignment: .leading) {
             Text("Featured")
                 .font(.largeTitle)

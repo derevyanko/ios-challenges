@@ -2,10 +2,15 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ZStack(alignment: .bottom) {
+        VStack(spacing: 0) {
             Home()
             
             TabView()
+            
+            Rectangle()
+                .ignoresSafeArea()
+                .foregroundColor(.deepBlue)
+                .frame(maxHeight: 0)
         }
     }
 }
