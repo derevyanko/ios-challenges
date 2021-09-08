@@ -3,9 +3,7 @@ import SwiftUI
 struct Home: View {
     var body: some View {
         ZStack {
-            Rectangle()
-                .ignoresSafeArea()
-                .foregroundColor(.deepBlue)
+            Background()
             
             ScrollView(showsIndicators: false) {
                 VStack(alignment: .leading) {
@@ -15,7 +13,16 @@ struct Home: View {
                     
                     DailyThought()
                 
-                    Topics()
+                    VStack(alignment: .leading, spacing: 0) {
+                        Text("Featured")
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                            .padding(.bottom)
+                            .foregroundColor(.white)
+                            .padding(.leading)
+                        
+                        Topics()
+                    }
                 }
             }
         }

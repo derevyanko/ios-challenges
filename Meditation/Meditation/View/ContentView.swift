@@ -7,9 +7,7 @@ struct ContentView: View {
             
             TabView()
             
-            Rectangle()
-                .ignoresSafeArea()
-                .foregroundColor(.deepBlue)
+            Background()
                 .frame(maxHeight: 0)
         }
     }

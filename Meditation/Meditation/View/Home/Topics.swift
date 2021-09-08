@@ -6,12 +6,6 @@ struct Topics: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Featured")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .padding(.bottom)
-                .foregroundColor(.white)
-            
             ForEach(0 ..< topicsData.topics.count / topicsColumnCount + 1) { rowIndex in
                 HStack(spacing: 8) {
                     let startColumnIndex = rowIndex * topicsColumnCount
