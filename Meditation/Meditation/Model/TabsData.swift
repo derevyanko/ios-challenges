@@ -1,6 +1,6 @@
 import SwiftUI
 
-final class TabViewsData: ObservableObject {
+final class TabsData: ObservableObject {
     @Published var selectedTabIndex = 0
     var tabItems = [
         TabItem(

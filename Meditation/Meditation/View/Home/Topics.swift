@@ -10,9 +10,10 @@ struct Topics: View {
                 HStack(spacing: 8) {
                     let startColumnIndex = rowIndex * topicsColumnCount
                     let endColumnIndex = min(startColumnIndex + topicsColumnCount, topicsData.topics.count)
+                    
                     ForEach(startColumnIndex ..< endColumnIndex) { index in
                         if index < topicsData.topics.count {
-                            Topic(topicData: topicsData.topics[index])
+                            TopicView(topicData: topicsData.topics[index])
                         } else {
                             EmptyView()
                         }
@@ -23,7 +24,7 @@ struct Topics: View {
     }
 }
 
-struct Topic: View {
+struct TopicView: View {
     var topicData: TopicData
     
     var body: some View {

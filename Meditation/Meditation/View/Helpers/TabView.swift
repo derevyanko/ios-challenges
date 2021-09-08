@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct TabView: View {
-    @EnvironmentObject private var tabViews: TabViewsData
+    @EnvironmentObject private var tabViews: TabsData
     
     var body: some View {
         HStack {
@@ -23,7 +23,7 @@ struct TabView: View {
                     
                     Text(tab.name)
                         .foregroundColor(.white)
-                }.frame(maxWidth: .infinity)
+                }.frame(minWidth: 52, maxWidth: .infinity, maxHeight: 80)
             }
         }.ignoresSafeArea()
         .padding(.vertical, 4)
@@ -38,6 +38,6 @@ struct TabView: View {
 struct TabView_Previews: PreviewProvider {
     static var previews: some View {
         TabView()
-            .environmentObject(TabViewsData())
+            .environmentObject(TabsData())
     }
 }

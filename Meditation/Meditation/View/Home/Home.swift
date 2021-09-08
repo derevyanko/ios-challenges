@@ -9,7 +9,7 @@ struct Home: View {
                 VStack(alignment: .leading) {
                     SearchPanel()
                     
-                    Mood()
+                    MoodView()
                     
                     DailyThought()
                 
@@ -32,7 +32,7 @@ struct Home: View {
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
         Home()
-            .environmentObject(TabViewsData())
+            .environmentObject(TabsData())
             .environmentObject(TopicsData())
             .environmentObject(MoodsData())
             .environment(\.locale, .init(identifier: "uk"))

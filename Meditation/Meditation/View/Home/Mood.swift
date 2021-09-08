@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct Mood: View {
+struct MoodView: View {
     @EnvironmentObject private var moodsData: MoodsData
     
     var body: some View {
@@ -20,9 +20,9 @@ struct Mood: View {
     }
 }
 
-struct Mood_Previews: PreviewProvider {
+struct MoodView_Previews: PreviewProvider {
     static var previews: some View {
-        Mood()
+        MoodView()
             .environmentObject(MoodsData())
     }
 }
