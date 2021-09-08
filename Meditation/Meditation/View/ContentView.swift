@@ -3,6 +3,9 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack(spacing: 0) {
+            Background()
+                .frame(maxHeight: 1)
+            
             Home()
             
             TabView()
