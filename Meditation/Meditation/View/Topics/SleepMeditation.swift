@@ -7,7 +7,7 @@ struct SleepMeditation: View {
         ZStack {
             Background()
             
-            VStack {
+            VStack(spacing: 0) {
                 HStack {
                     Button(action: {
                         self.mode.wrappedValue.dismiss()
@@ -96,21 +96,6 @@ struct SleepMeditation: View {
             }
             .navigationBarHidden(true)
         }
-//        .navigationBarBackButtonHidden(true)
-//        .navigationBarTitleDisplayMode(.inline)
-//        .navigationBarItems(leading:
-//            Button(action: {
-//                self.mode.wrappedValue.dismiss()
-//            }, label: {
-//                Image(systemName: "arrow.backward")
-//            })
-//            .foregroundColor(.white)
-//            .font(.title2)
-//            , trailing:
-//            Image(systemName: "star.fill")
-//                .foregroundColor(.white)
-//                .font(.title2)
-//        )
     }
 }
 

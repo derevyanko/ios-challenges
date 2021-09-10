@@ -25,7 +25,7 @@ struct TabView: View {
                         .foregroundColor(.white)
                 }.frame(minWidth: 52, maxWidth: .infinity, maxHeight: 80)
             }
-        }.ignoresSafeArea()
+        }.edgesIgnoringSafeArea(.all)
         .padding(.vertical, 4)
         .background(Color.deepBlue)
         .background(

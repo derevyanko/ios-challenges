@@ -12,11 +12,7 @@ struct Topics: View {
                     let endColumnIndex = min(startColumnIndex + topicsColumnCount, topicsData.topics.count)
                     
                     ForEach(startColumnIndex ..< endColumnIndex) { index in
-                        if index < topicsData.topics.count {
-                            TopicView(topicData: topicsData.topics[index])
-                        } else {
-                            EmptyView()
-                        }
+                        TopicView(topicData: topicsData.topics[index])
                     }
                 }
             }

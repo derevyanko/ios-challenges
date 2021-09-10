@@ -16,12 +16,12 @@ final class TopicsData: ObservableObject {
             name: NSLocalizedString("Night\nIsland", comment: ""),
             image: Image(systemName: "moon.stars"),
             color: Color.yellow
-        ),
-        TopicData(
-            name: NSLocalizedString("Calming\nSounds", comment: ""),
-            image: Image(systemName: "music.note"),
-            color: Color.orange
         )
+//        TopicData(
+//            name: NSLocalizedString("Calming\nSounds", comment: ""),
+//            image: Image(systemName: "music.note"),
+//            color: Color.orange
+//        )
     ]
 }
 
