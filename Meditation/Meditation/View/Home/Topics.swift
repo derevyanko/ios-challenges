@@ -45,13 +45,15 @@ struct TopicView: View {
                 
                 Spacer()
                 
-                Text("Start")
-                    .padding(.vertical, 12)
-                    .padding(.horizontal, 20)
-                    .foregroundColor(.black)
-                    .background(Color.white)
-                    .cornerRadius(16)
-                    .frame(maxHeight: 52)
+                NavigationLink(destination: SleepMeditation()) {
+                    Text("Start")
+                        .padding(.vertical, 12)
+                        .padding(.horizontal, 20)
+                        .foregroundColor(.black)
+                        .background(Color.white)
+                        .cornerRadius(16)
+                        .frame(maxHeight: 52)
+                }
             }
         }.frame(minHeight: 140, maxHeight: 152)
         .padding()

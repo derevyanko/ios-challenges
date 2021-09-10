@@ -2,29 +2,31 @@ import SwiftUI
 
 struct Home: View {
     var body: some View {
-        ZStack {
-            Background()
-            
-            ScrollView(showsIndicators: false) {
-                VStack(alignment: .leading) {
-                    SearchPanel()
-                    
-                    MoodView()
-                    
-                    DailyThought()
+        NavigationView {
+            ZStack {
+                Background()
                 
+                ScrollView(showsIndicators: false) {
                     VStack(alignment: .leading, spacing: 0) {
-                        Text("Featured")
-                            .font(.largeTitle)
-                            .fontWeight(.bold)
-                            .padding(.bottom)
-                            .foregroundColor(.white)
-                            .padding(.leading)
+                        SearchPanel()
                         
-                        Topics()
+                        MoodView()
+                        
+                        DailyThought()
+                    
+                        VStack(alignment: .leading, spacing: 0) {
+                            Text("Featured")
+                                .font(.largeTitle)
+                                .fontWeight(.bold)
+                                .padding(.bottom)
+                                .foregroundColor(.white)
+                                .padding(.leading)
+                            
+                            Topics()
+                        }
                     }
                 }
-            }
+            }.navigationBarHidden(true)
         }
     }
 }
