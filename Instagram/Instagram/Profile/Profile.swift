@@ -15,6 +15,8 @@ struct Profile: View {
                 ActionStories()
                 
                 Tabs()
+                
+                Posts()
             }
         }
     }
@@ -24,5 +26,6 @@ struct Profile_Previews: PreviewProvider {
     static var previews: some View {
         Profile()
             .environmentObject(TabsData())
+            .environmentObject(PostsData())
     }
 }

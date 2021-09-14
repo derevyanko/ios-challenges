@@ -19,6 +19,7 @@ struct Tabs: View {
                 }
             }
         }
+        .padding(.bottom, -10)
         .font(.title2)
     }
 }
