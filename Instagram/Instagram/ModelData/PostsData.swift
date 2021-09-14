@@ -21,12 +21,12 @@ final class PostsData: ObservableObject {
         PostData(id: 4,
                  image: Image("multiple_languages"),
                  text: ""
-        ),
-        PostData(id: 5,
-                 image: Image("bad_habits")
-                    .resizable(),
-                 text: ""
         )
+//        PostData(id: 5,
+//                 image: Image("bad_habits")
+//                    .resizable(),
+//                 text: ""
+//        )
     ]
 }
 

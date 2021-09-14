@@ -2,13 +2,14 @@ import SwiftUI
 
 struct Posts: View {
     @EnvironmentObject var postsData: PostsData
-    var postHeight = UIScreen.screenWidth / 3 - 4
+    var postSize = (UIScreen.screenWidth - 4) / 3
     
     var body: some View {
-        VStack(spacing: 2) {
+        VStack(alignment: .leading, spacing: 2) {
             let postsCount = postsData.posts.count
+            let rowCount = Int(ceil(Double(postsCount) / 3.0))
             
-            ForEach(0 ..< postsCount / 3) { rowIndex in
+            ForEach(0 ..< rowCount) { rowIndex in
                 HStack(spacing: 2) {
                     let startIndex = rowIndex * 3
                     let endIndex = min(startIndex + 3, postsCount)
@@ -17,7 +18,7 @@ struct Posts: View {
                             postsData.posts[index].image
                                 .resizable()
                                 .scaledToFill()
-                                .frame(height: postHeight, alignment: .center)
+                                .frame(width: postSize, height: postSize)
                                 .clipped()
                     }
                 }
