@@ -9,9 +9,13 @@ struct Tabs: View {
                 let isSelected = (tabsData.selectedTabIndex == tab.id)
                 
                 VStack {
-                    tab.image
-                        .frame(maxWidth: .infinity)
-                        .foregroundColor(isSelected ? .black : .gray)
+                    Button(action: {
+                        tabsData.selectedTabIndex = tab.id
+                    }, label: {
+                        tab.image
+                            .frame(maxWidth: .infinity)
+                            .foregroundColor(isSelected ? .black : .gray)
+                    })
                     
                     Rectangle()
                         .frame(height: 2)
