@@ -3,45 +3,11 @@ import SwiftUI
 struct Navigation: View {
     var body: some View {
         HStack {
-            Button(action: {}, label: {
-                HStack(spacing: 4) {
-                    Text("Following")
-                        .fontWeight(.medium)
-                    
-                    Image(systemName: "chevron.down")
-                }
-            })
-            .frame(width: 112, height: 28)
-            .overlay(
-                RoundedRectangle(cornerRadius: 4)
-                    .stroke(Color.gray, lineWidth: 1)
-            )
+            NavigationButtonView(name: "Following", image: Image(systemName: "chevron.down"))
             
-            Spacer()
+            NavigationButtonView(name: "Message", image: nil)
             
-            Button(action: {}, label: {
-                Text("Message")
-                    .fontWeight(.medium)
-            })
-            .frame(width: 112, height: 28)
-            .overlay(
-                RoundedRectangle(cornerRadius: 4)
-                    .stroke(Color.gray, lineWidth: 1)
-            )
-            
-            Spacer()
-            
-            Button(action: {}, label: {
-                Text("Email")
-                    .fontWeight(.medium)
-            })
-            .frame(width: 112, height: 28)
-            .overlay(
-                RoundedRectangle(cornerRadius: 4)
-                    .stroke(Color.gray, lineWidth: 1)
-            )
-            
-            Spacer()
+            NavigationButtonView(name: "Email", image: nil)
             
             Button(action: {}, label: {
                 Image(systemName: "chevron.down")
@@ -53,6 +19,29 @@ struct Navigation: View {
             )
         }.foregroundColor(.black)
         .padding()
+    }
+}
+
+struct NavigationButtonView: View {
+    var name: String
+    var image: Image?
+    
+    var body: some View {
+        Button(action: {}, label: {
+            HStack(spacing: 4) {
+                Text(name)
+                    .fontWeight(.medium)
+                
+                if let image = image {
+                    image
+                }
+            }
+        })
+        .frame(maxWidth: .infinity, maxHeight: 28)
+        .overlay(
+            RoundedRectangle(cornerRadius: 4)
+                .stroke(Color.gray, lineWidth: 1)
+        )
     }
 }
 

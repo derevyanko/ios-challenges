@@ -2,7 +2,7 @@ import SwiftUI
 
 struct ActionStories: View {
     var body: some View {
-        HStack(spacing: 20) {
+        HStack {
             StoryView(image: Image("youtube"), name: "YouTube")
             
             StoryView(image: Image("qa"), name: "Q&A")
@@ -12,6 +12,7 @@ struct ActionStories: View {
             StoryView(image: Image("telegram"), name: "Telegram")
         }
         .padding(.horizontal)
+        .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
 
@@ -33,6 +34,7 @@ struct StoryView: View {
                 )
             
             Text(name)
+                .lineLimit(1)
         }
     }
 }

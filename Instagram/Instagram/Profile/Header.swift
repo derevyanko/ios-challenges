@@ -2,24 +2,23 @@ import SwiftUI
 
 struct Header: View {
     var body: some View {
-        HStack {
+        HStack(spacing: 0) {
             Text(Image(systemName: "arrow.backward"))
-            
-            Spacer()
             
             Text("derevyanko25")
                 .fontWeight(.bold)
+                .frame(maxWidth: .infinity)
+                .lineLimit(1)
+                .multilineTextAlignment(.center)
             
-            Spacer()
-            
-            Text(Image(systemName: "bell"))
-            
-            Spacer()
-            
-            Text(Image(systemName: "dot.square"))
+            HStack(spacing: 20) {
+                Text(Image(systemName: "bell"))
+                
+                Text(Image(systemName: "dot.square"))
+            }
         }
-        .font(.title3)
-        .padding(.horizontal)
+        .font(.title2)
+        .padding(.horizontal, 12)
     }
 }
 

@@ -2,7 +2,7 @@ import SwiftUI
 
 struct StatsRow: View {
     var body: some View {
-        HStack {
+        HStack(spacing: 0) {
             Image("profile")
                 .resizable()
                 .frame(width: 100, height: 100)
@@ -14,19 +14,13 @@ struct StatsRow: View {
                         .opacity(0.5)
                 )
             
-            Spacer()
-            
             Stats(name: "Posts", stats: 601)
-            
-            Spacer()
             
             Stats(name: "Followers", stats: 99_800)
             
-            Spacer()
-            
             Stats(name: "Following", stats: 72)
         }
-        .padding(.horizontal)
+        .padding(.horizontal, 12)
     }
 }
 
@@ -42,6 +36,8 @@ struct Stats: View {
             
             Text(name)
         }
+        .frame(maxWidth: .infinity)
+        .lineLimit(1)
     }
 }
 

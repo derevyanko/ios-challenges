@@ -11,11 +11,13 @@ struct Info: View {
                 "Subscribe to my YouTube channel!")
             
             Link("https://youtube.com/c/PhilippLackner",
-                 destination: URL(string: "https://youtube.com/c/PhilippLackner")!)
+                 destination: URL(string: "https://youtube.com/c/PhilippLackner")!
+            )
             
             Group {
                 Text("Followed by ") +
-                Text("codingflow, soruc_ahlem and 17 others").bold()
+                Text("codingflow, soruc_ahlem and 17 others")
+                    .bold()
             }
         }.padding(.horizontal, 20)
     }
